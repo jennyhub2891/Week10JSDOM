@@ -14,7 +14,7 @@ function validateAndAddRow() {
     var owner = document.getElementById("owner").value;
     var phone = document.getElementById("phone").value;
 
-    //Validate form fields
+    //Validate fields
 
     if (name.trim() === "") {
         alert("Please enter a name.");
