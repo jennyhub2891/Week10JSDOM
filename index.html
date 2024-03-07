@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+   
+    <!-- Custom CSS -->
+    <!--<style>
+        body {
+            padding: 20px;
+        }
+    </style>-->
+</head>
+<body>
+
+<div class="container">
+    <h2>Patient Info Form</h2>
+
+    <!-- Bootstrap Table -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pet Name</th>
+                <th>Pet Breed</th>
+                <th>Owner</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- Bootstrap Form -->
+    <form id="dataForm" onsubmit="return validationAndAddRow()">
+        <div class="form-group">
+            <label for="name"> Pet Name:</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="breed">Breed:</label>
+            <input type="text" class="form-control" id="breed" required>
+        </div>
+        <div class="form-group">
+            <label for="owner">Owner:</label>
+            <input type="text" class="form-control" id="owner" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="phone" class="form-control" id="phone" required>
+        </div>
+        <button type="button" class="btn btn-primary" id="submitButton" onclick="addRow()">Submit</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src = "index.js"></script>
+
+</body>
+</html>
